@@ -9,5 +9,8 @@ LazyData: true
 License: MIT + file LICENSE
 Imports: 
     rlang,
-    dplyr
+    dplyr (>= 0.8.0)
 RoxygenNote: 6.1.1
+Remotes:
+    tidyverse/dplyr
+
