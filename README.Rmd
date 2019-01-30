@@ -15,6 +15,7 @@ knitr::opts_chunk$set(
 # splice
 
 <!-- badges: start -->
+[![Travis build status](https://travis-ci.org/romainfrancois/splice.svg?branch=master)](https://travis-ci.org/romainfrancois/splice)
 <!-- badges: end -->
 
 `splice` is an experimental package that brings some capabilities of 
