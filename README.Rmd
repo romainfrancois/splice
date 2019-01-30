@@ -1,0 +1,60 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+# splice
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+`splice` is an experimental package that brings some capabilities of 
+`dplyr::summarise_(all,if,at)` to `dplyr::summarise()` directly. 
+
+## Installation
+
+You can install from github:
+
+``` r
+# install.packages("remotes")
+devtools::install_github("romainfrancois/splice")
+```
+
+## Example
+
+The motivating example was "how do I get the mean of all variables AND the number of observations". 
+
+There are many ways to get just that information, but I wanted to use `dplyr::summarise_all()`
+which would get me the means, but not the number of observations. 
+
+`summarise(!!!all_(...))` is the same as `summarise_all(...)` but having `!!!all_()` inside
+`summarise()` lets you add other things as well: 
+
+```{r example}
+library(dplyr)
+library(splice)
+
+iris %>% 
+  group_by(Species) %>% 
+  summarise(n = n(), !!!all_(mean))
+```
+
+Similarly, `if_()` and `at_()`: 
+
+```{r}
+iris %>%
+  summarise(n = n(), !!!if_(is.numeric, mean))
+
+iris %>%
+  summarise(n = n(), !!!at_(vars(starts_with("Sepal")), mean))
+```
+

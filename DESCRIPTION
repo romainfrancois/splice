@@ -1,0 +1,15 @@
+Package: splice
+Title: What the Package Does (one line, title case)
+Version: 0.0.0.9000
+Authors@R: person("Romain", "François", email = "romain@rstudio.com", role = c("aut", "cre"))
+Description: dplyr splice tools.
+Depends: R (>= 3.5.0)
+Encoding: UTF-8
+LazyData: true
+License: MIT + file LICENSE
+Imports: 
+    rlang,
+    dplyr (>= 0.8.0)
+Remotes:
+    tidyverse/dplyr
+RoxygenNote: 6.1.1
