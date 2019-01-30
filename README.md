@@ -5,6 +5,8 @@
 
 <!-- badges: start -->
 
+[![Travis build
+status](https://travis-ci.org/romainfrancois/splice.svg?branch=master)](https://travis-ci.org/romainfrancois/splice)
 <!-- badges: end -->
 
 `splice` is an experimental package that brings some capabilities of
@@ -32,15 +34,7 @@ number of observations.
 `!!!all_()` inside `summarise()` lets you add other things as well:
 
 ``` r
-library(dplyr)
-#> 
-#> Attaching package: 'dplyr'
-#> The following objects are masked from 'package:stats':
-#> 
-#>     filter, lag
-#> The following objects are masked from 'package:base':
-#> 
-#>     intersect, setdiff, setequal, union
+library(dplyr, warn.conflicts = FALSE)
 library(splice)
 
 iris %>% 

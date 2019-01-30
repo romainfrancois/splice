@@ -41,7 +41,7 @@ which would get me the means, but not the number of observations.
 `summarise()` lets you add other things as well: 
 
 ```{r example}
-library(dplyr)
+library(dplyr, warn.conflicts = FALSE)
 library(splice)
 
 iris %>% 
