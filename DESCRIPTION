@@ -1,7 +1,7 @@
 Package: splice
 Title: What the Package Does (one line, title case)
 Version: 0.0.0.9000
-Authors@R: person("Romain", "François", email = "romain@rstudio.com", role = c("aut", "cre"))
+Authors@R: person("Romain", "François", email = "romain@purrple.cat", role = c("aut", "cre"))
 Description: dplyr splice tools.
 Depends: R (>= 3.5.0)
 Encoding: UTF-8
